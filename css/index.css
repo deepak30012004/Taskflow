@@ -1,0 +1,123 @@
+/* Reset and Base Styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #ffffff;
+  padding: 20px;
+}
+
+/* Container Glass Box */
+.container {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 40px;
+  border-radius: 18px;
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Logo */
+.logo img {
+  width: 50px;
+  margin-bottom: 20px;
+}
+
+/* Branding */
+.brand-title {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.tagline {
+  font-size: 14px;
+  color: #cfcfcf;
+  margin-top: 5px;
+}
+
+.note {
+  font-size: 12px;
+  margin-top: 8px;
+  color: #a8a8a8;
+}
+
+/* Form */
+form {
+  margin-top: 30px;
+  text-align: left;
+}
+
+.form-title {
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+label {
+  font-size: 13px;
+  margin-bottom: 6px;
+  display: block;
+  color: #dddddd;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  background-color: #1e1e2f;
+  color: white;
+  border: 1px solid #333;
+  margin-bottom: 20px;
+  outline: none;
+  font-size: 14px;
+}
+
+input::placeholder {
+  color: #999;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 25px;
+  font-weight: bold;
+  font-size: 16px;
+  color: white;
+  cursor: pointer;
+  background: linear-gradient(to right, #4e54c8, #8f94fb);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: linear-gradient(to right, #8f94fb, #4e54c8);
+}
+
+.btn-icon {
+  font-weight: bold;
+}
+
+/* Disclaimer */
+.disclaimer {
+  margin-top: 20px;
+  font-size: 11px;
+  color: #b5b5b5;
+  text-align: center;
+}

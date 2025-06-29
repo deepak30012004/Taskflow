@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TaskFlow - Todo App</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="app-body">
+  <!-- Header with app name and user profile -->
+  <header class="app-header">
+    <h1>My Todo App</h1>
+    <div class="user-info">
+      <span id="user-name">User</span>
+      <img id="user-avatar" src="" alt="Avatar">
+      <button id="sign-out">Sign Out</button>\
+      <button id="theme-toggle" aria-label="Toggle Dark/Light Mode">Toggle Theme</button>
+
+    </div>
+  </header>
+
+  <!-- Main content area -->
+  <main class="main-content">
+
+    <!-- Task Tabs -->
+    <div class="tabs">
+      <button class="tab active" data-stage="todo">Todo (<span id="todo-count">0</span>)</button>
+      <button class="tab" data-stage="completed">Completed (<span id="completed-count">0</span>)</button>
+      <button class="tab" data-stage="archived">Archived (<span id="archived-count">0</span>)</button>
+    </div>
+
+    <!-- Add New Task Form -->
+    <form id="task-form" class="task-form">
+      <input type="text" id="task-input" placeholder="Add your task (text-box)" required />
+      <button type="submit">Submit</button>
+    </form>
+
+    <!-- Task List Section -->
+    <section id="task-list" class="task-list">
+      <!-- JavaScript will render tasks here -->
+    </section>
+
+  </main>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
