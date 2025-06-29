@@ -4,11 +4,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>TaskFlow - Identity Verification</title>
+
+  <!-- Your custom styles -->
   <link rel="stylesheet" href="css/index.css" />
+
+  <!-- ✅ Flatpickr CSS -->
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/themes/material_blue.css"/>
 </head>
 <body>
   <div class="container">
-  
     <h1 class="brand-title">TaskFlow</h1>
     <p class="tagline">Your Personal Productivity Companion</p>
     <p class="note">🔒 Age verification required for access</p>
@@ -20,19 +24,31 @@
       <input type="text" id="name" placeholder="Enter your full name" required />
 
       <label for="dob">Date of Birth</label>
-      <input type="date" id="dob" required />
-
+      <!-- ✅ Changed to text so Flatpickr can take over -->
+      <input type="text" id="dob" placeholder="Select your date of birth" required />
 
       <button type="submit"><span class="btn-icon">✔</span> Verify & Continue</button>
     </form>
 
-      <p id="error" class="error-message"></p>
+    <p id="error" class="error-message"></p>
 
     <p class="disclaimer">
       By continuing, you confirm that you are over 10 years old and agree to our terms of service.
     </p>
   </div>
 
+  <!-- ✅ Flatpickr JS -->
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+  <!-- ✅ Initialize Flatpickr -->
+  <script>
+    flatpickr("#dob", {
+      maxDate: "today",
+      dateFormat: "Y-m-d", // Will be submitted/processed as YYYY-MM-DD
+    });
+  </script>
+
+  <!-- Your app logic -->
   <script src="js/index.js"></script>
 </body>
 </html>

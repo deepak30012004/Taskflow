@@ -19,6 +19,7 @@ document.getElementById("sign-out").addEventListener("click", () => {
 
 // === INITIALIZE APP ===
 window.addEventListener("DOMContentLoaded", async () => {
+   
   const storedTasks = JSON.parse(localStorage.getItem("tasks"));
   if (storedTasks && storedTasks.length) {
     tasks = storedTasks;
@@ -33,10 +34,18 @@ window.addEventListener("DOMContentLoaded", async () => {
       updatedAt: new Date().toLocaleString()
     }));
     localStorage.setItem("tasks", JSON.stringify(tasks));
+
+
   }
+
+
+
+
+
 
   renderTasks();
 });
+
 
 
 
@@ -46,6 +55,14 @@ const body = document.querySelector("body");
 toggleBtn.addEventListener("click", () => {
   body.classList.toggle("light");
 });
+
+
+
+
+
+
+
+
 
 // === ADD TASK ===
 document.getElementById("task-form").addEventListener("submit", (e) => {
